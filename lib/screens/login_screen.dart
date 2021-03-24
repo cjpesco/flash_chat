@@ -35,13 +35,11 @@ class _LoginScreenState extends State<LoginScreen>
 
     _animationController.addListener(() {
       setState(() {});
-      print(_animation.value);
     });
   }
 
   void _checkFocus(FocusNode focusNode) {
     focusNode.addListener(() {
-      debugPrint("Focus: " + focusNode.hasFocus.toString());
       if (focusNode.hasFocus == true) {
         _animationController.forward();
       } else if (focusNode.hasFocus == false) {
